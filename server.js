@@ -8,6 +8,7 @@ const users = require('./Routes/api/users')
 const chat = require('./Routes/api/chat')
 const posts = require("./Routes/api/posts")
 const message = require("./Routes/api/message")
+const uploadRoute = require("./Routes/api/upload");
 const dotenv = require("dotenv");
 const cors = require('cors');
 const bodyParser = require("body-parser");
@@ -49,6 +50,7 @@ app.use("/api/users", users);
 app.use("/api/post/", posts);
 app.use("/api/chat/", chat);
 app.use("/api/message/", message);
+app.use("/api/upload", uploadRoute);
 
 
 io.on("connection", (socket) => {

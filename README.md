@@ -22,6 +22,17 @@ MONGO_URL=mongodb://127.0.0.1:27017/socialmedia
 JWT_SECRET=my_social_secret
 
 
+### 2 Part 2. Set up Cloudinary:
+   - Go to [Cloudinary](https://cloudinary.com/) and sign up for a free account.
+   - Once logged in, obtain your Cloudinary `CLOUD_NAME`, `CLOUD_API_KEY`, and `CLOUD_API_SECRET`.
+   - Add these values to the `.env` file:
+```
+CLOUD_NAME=your_cloud_name
+CLOUD_API_KEY=your_api_key
+CLOUD_API_SECRET=your_api_secret
+```
+
+
 ### 3. Server-Side Dependencies Hook & Initialization
 Launch your command terminal mapped inside the backend project root folder and execute the sequential lifecycle commands: 
 
@@ -39,8 +50,6 @@ Here is the structural blueprint of the backend repository. It highlights the mo
 ```text
 Social-Networking-Mern-main/
 ├── config/
-│   ├── config.js          # Global app configuration & fallback manager
-│   └── db.js              # Database initialization & Mongoose connection hooks
 ├── Controllers/           # Request processors & application business logic
 ├── middleware/            # Security shields and JWT authorization verification
 ├── Routes/                # Express API endpoint mapping and route declarations
